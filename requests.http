@@ -1,0 +1,60 @@
+@host = http://localhost:3000
+
+### Cadastro de usuário
+
+POST {{host}}/cadastro
+Content-Type: application/json
+
+{
+  "username": "luiz",
+  "email": "lucachaves@gmail.com",
+  "senha": "@aOl03ao",
+  "confirma_senha": "@aOl03ao"
+}
+
+### Array de usuários
+GET {{host}}/usuarios
+
+### Deletar usuário
+
+DELETE {{host}}/usuarios/:id
+
+### Array de livros
+
+GET {{host}}/livros
+
+### Cadastrar livro
+
+POST {{host}}/cadastro/livro
+Content-Type: application/json
+
+{
+  "titulo": "teste",
+  "autor": "testeovaldo da silva",
+  "editora": "testando",
+  "genero": "romance"
+}
+
+### Deletar livro 
+
+DELETE {{host}}/livros/:id
+
+### Login válido
+
+POST {{host}}/login
+Content-Type: application/json
+
+{
+  "email": "heleny@example.com",
+  "senha": "senhasenha"
+}
+
+### Login inválido
+
+POST {{host}}/login
+Content-Type: application/json
+
+{
+  "email": "heleny@gmail.com",
+  "senha": "adorodesenhar"
+}
